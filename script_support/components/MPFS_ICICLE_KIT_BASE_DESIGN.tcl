@@ -6,6 +6,16 @@ create_smartdesign -sd_name ${sd_name}
 auto_promote_pad_pins -promote_all 0
 
 # Create top level Scalar Ports
+
+# SC_SPI Interface Signals
+sd_create_scalar_port -sd_name ${sd_name} -port_name {SC_DI} -port_direction {IN} -port_is_pad {1}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {SC_FLASH} -port_direction {IN} -port_is_pad {1}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {SC_IFACE} -port_direction {IN} -port_is_pad {1}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {SC_DO} -port_direction {OUT} -port_is_pad {1}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {SC_CLK} -port_direction {INOUT} -port_is_pad {1}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {SC_SS} -port_direction {INOUT} -port_is_pad {1}
+
+
 sd_create_scalar_port -sd_name ${sd_name} -port_name {CAN_0_RXBUS_F2M} -port_direction {IN}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {CAN_1_RXBUS} -port_direction {IN} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {COREUART_RX} -port_direction {IN}
@@ -226,6 +236,18 @@ sd_invert_pins -sd_name ${sd_name} -pin_names {SW2_OR_GPIO_2_26:A}
 # Add SW3_OR_GPIO_2_27 instance
 sd_instantiate_macro -sd_name ${sd_name} -macro_name {OR2} -instance_name {SW3_OR_GPIO_2_27}
 sd_invert_pins -sd_name ${sd_name} -pin_names {SW3_OR_GPIO_2_27:A}
+
+
+
+# SC_SPIFLASH instance Connections
+
+sd_connect_pins -sd_name ${sd_name} -pin_names {"FIC_3_PERIPHERALS_1:FLASH" "SC_FLASH" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"FIC_3_PERIPHERALS_1:DI" "SC_DI" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"FIC_3_PERIPHERALS_1:IFACE" "SC_IFACE" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"FIC_3_PERIPHERALS_1:DO" "SC_DO" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"FIC_3_PERIPHERALS_1:CLK" "SC_CLK" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"FIC_3_PERIPHERALS_1:SS" "SC_SS" }
+
 
 
 

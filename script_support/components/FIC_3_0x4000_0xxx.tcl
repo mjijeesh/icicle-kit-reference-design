@@ -1,8 +1,8 @@
 # Exporting Component Description of FIC_3_0x4000_0xxx to TCL
 # Family: PolarFireSoC
-# Part Number: MPFS250T_ES-FCVG484E
+# Part Number: MPFS250T-FCVG484E
 # Create and Configure the core component FIC_3_0x4000_0xxx
-create_and_configure_core -download_core -core_vlnv {Actel:DirectCore:CoreAPB3:*} -component_name {FIC_3_0x4000_0xxx} -params {\
+create_and_configure_core -core_vlnv {Actel:DirectCore:CoreAPB3:4.2.100} -component_name {FIC_3_0x4000_0xxx} -params {\
 "APB_DWIDTH:32"  \
 "APBSLOT0ENABLE:true"  \
 "APBSLOT1ENABLE:true"  \
@@ -10,7 +10,7 @@ create_and_configure_core -download_core -core_vlnv {Actel:DirectCore:CoreAPB3:*
 "APBSLOT3ENABLE:true"  \
 "APBSLOT4ENABLE:true"  \
 "APBSLOT5ENABLE:true"  \
-"APBSLOT6ENABLE:false"  \
+"APBSLOT6ENABLE:true"  \
 "APBSLOT7ENABLE:false"  \
 "APBSLOT8ENABLE:false"  \
 "APBSLOT9ENABLE:false"  \

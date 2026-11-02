@@ -34,6 +34,8 @@ source components/FIC_1_PERIPHERALS.tcl
 source components/COREI2C_C0.tcl 
 source components/CORE_I2C_C0_0_WRAPPER.tcl 
 source components/CoreUARTapb_C0.tcl 
+source components/CORESPI_C0.tcl
+source components/SC_SPIFLASH.tcl 
 source components/FIC_3_0x4000_0xxx.tcl 
 source components/FIC_3_0x4FFF_Fxxx.tcl 
 source components/FIC_3_0x4xxx_xxxx.tcl 
