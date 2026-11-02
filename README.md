@@ -16,7 +16,7 @@ execute the Script fiel from Libero GUI with MPFS250T option and  program the IC
 
 from CLI use SCRIPT_ARGS MPFS250T and EXPORT_FPE  to generate the job file. 
 
-$libero SCRIPT:./MPFS_ICICLE_KIT_REFERENCE_DESIGN.tcl SCRIPT_ARGS:"MPFS250T EXPORT_FPE"
+`$libero SCRIPT:./MPFS_ICICLE_KIT_REFERENCE_DESIGN.tcl SCRIPT_ARGS:"MPFS250T EXPORT_FPE"`
 
 
 
