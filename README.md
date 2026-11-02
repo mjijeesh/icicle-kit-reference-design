@@ -1,3 +1,30 @@
+
+
+## Whats New
+
+Added support for System Controller SPI Flash.
+
+CoreSPI  and PF_SPI block is added to the Design and available as part of FIC3_Peripherals.
+
+CoreSPI memory map : 0x40000600 
+
+Use thsi base adress in the custom HSS with SPI Flash write support.
+
+### Generate the Design and program.
+
+execute the Script fiel from Libero GUI with MPFS250T option and  program the ICICLE baord.
+
+from CLI use SCRIPT_ARGS MPFS250T and EXPORT_FPE  to generate the job file. 
+
+$libero SCRIPT:./MPFS_ICICLE_KIT_REFERENCE_DESIGN.tcl SCRIPT_ARGS:"MPFS250T EXPORT_FPE"
+
+
+
+November 2 2026.
+
+
+
+
 # PolarFire&reg; SoC Icicle Kit Reference Design Generation Tcl Scripts - Libero&reg; SoC v2025.2+
 
 ## Table of Contents
